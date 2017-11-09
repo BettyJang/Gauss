@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this,"再大一點",Toast.LENGTH_LONG);
         }else if (number > ran){
             System.out.print("太大了");
-        }else new AlertDialog.Builder(this).setMessage("答對了");
+        }else {
+            new AlertDialog.Builder(this).setMessage("答對了");
+        }
     }
 }
