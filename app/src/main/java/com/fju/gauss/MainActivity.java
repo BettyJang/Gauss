@@ -1,9 +1,11 @@
 package com.fju.gauss;
 
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -19,11 +21,9 @@ public class MainActivity extends AppCompatActivity {
         EditText edNumber = (EditText) findViewById(R.id.ed_number);
         int number = Integer.parseInt(edNumber.getText().toString());
         if (number < ran){
-            System.out.print("太小了");
+            Toast.makeText(this,"再大一點",Toast.LENGTH_LONG);
         }else if (number > ran){
             System.out.print("太大了");
-        }else {
-            System.out.print("恭喜答對");
-        }
+        }else new AlertDialog.Builder(this).setMessage("答對了");
     }
 }
